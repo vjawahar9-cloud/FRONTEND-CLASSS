@@ -1,30 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day4</title>
+  <title>HTML Tables Example</title>
 </head>
-
 <body>
-  <h1>FORM FOR THE ADMISSION IN SCHOOL</h1>
+  <!-- Task 1 & 2: Weekly Schedule Table -->
+  <h2>My Weekly Schedule</h2>
+  <table border="1" cellpadding="8" width="60%">
+    <tr>
+      <th>Day</th>
+      <th>Subject 1</th>
+      <th>Subject 2</th>
+      <th>Subject 3</th>
+    </tr>
+    <tr>
+      <td>Monday</td>
+      <td>Math</td>
+      <td>English</td>
+      <td>Science</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td>History</td>
+      <td>Math</td>
+      <td>Computer</td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td>English</td>
+      <td>Science</td>
+      <td>PE</td>
+    </tr>
+  </table>
 
-  <form action="">
-    <label for="">Name</label>
-    <input type="text" />
-    <br> <hr>
-    <label for="">Age</label>
-    <input type="number" />
-    <br><hr>
-    <label for="">Address</label>
-    
+  <br>
 
+  <!-- Task 3 & 4: Table with colspan and rowspan -->
+  <h2>Student Report</h2>
+  <table border="1" cellpadding="8" width="60%">
+    <tr>
+      <th colspan="4">Student Report</th>
+    </tr>
+    <tr>
+      <th rowspan="2">Name</th>
+      <th colspan="3">Marks</th>
+    </tr>
+    <tr>
+      <th>Math</th>
+      <th>Science</th>
+      <th>English</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>85</td>
+      <td>90</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>Emma</td>
+      <td>92</td>
+      <td>89</td>
+      <td>91</td>
+    </tr>
+  </table>
 
+  <br>
 
-
-  </form>
-
+  <!-- Bonus Task: Favorite Movies -->
+  <h2>My Favorite Movies</h2>
+  <table border="1" cellpadding="8" width="50%">
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Rating</th>
+    </tr>
+    <tr>
+      <td>Inception</td>
+      <td>Sci-Fi</td>
+      <td>9/10</td>
+    </tr>
+    <tr>
+      <td>Avengers: Endgame</td>
+      <td>Action</td>
+      <td>8.5/10</td>
+    </tr>
+    <tr>
+      <td>Interstellar</td>
+      <td>Adventure</td>
+      <td>9.2/10</td>
+    </tr>
+    <tr>
+      <td>The Lion King</td>
+      <td>Animation</td>
+      <td>8/10</td>
+    </tr>
+  </table>
 </body>
-
 </html>
