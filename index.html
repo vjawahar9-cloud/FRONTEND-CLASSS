@@ -3,75 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Tasks Example</title>
-  <style>
-    /* Styling just for better visual */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    .highlight {
-      color: blue;
-      font-weight: bold;
-    }
-  </style>
+  <title>Document</title>
 </head>
 <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Admission Form</title>
+</head>
+<body>
+  <h2>Student Admission Form</h2>
+  <form action="#" method="post" enctype="multipart/form-data">
+    
+    <!-- Student Details -->
+    <fieldset>
+      <legend>Personal Information</legend>
 
-  <!-- Task 1: Block-level elements -->
-  <h1>Welcome to My Webpage</h1>
-  <p>This is a paragraph describing my webpage. Each element appears on a new line.</p>
-  <img src="https://via.placeholder.com/200" alt="Example Image">
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" placeholder="Enter first name" required><br><br>
 
-  <hr>
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" placeholder="Enter last name" required><br><br>
 
-  <!-- Task 2: Inline elements -->
-  <p>
-    I am learning <b>HTML</b>, <i>CSS</i>, and <a href="https://www.w3schools.com" target="_blank">W3Schools</a> is helping me a lot!
-  </p>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required><br><br>
 
-  <hr>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="3" max="25" required><br><br>
 
-  <!-- Task 3: Using both block and inline elements -->
-  <h2>My Profile</h2>
-  <p>Hello! My name is <strong>Sam</strong> and I love <em>coding</em>.</p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
 
-  <hr>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" placeholder="1234567890" required><br><br>
 
-  <!-- Task 4: Lists -->
-  <h3>My Favorite Movies (Unordered List)</h3>
-  <ul>
-    <li>Inception</li>
-    <li>Interstellar</li>
-    <li>Avengers: Endgame</li>
-  </ul>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select><br><br>
 
-  <h3>My Goals for This Year (Ordered List)</h3>
-  <ol>
-    <li>Learn Full Stack Development</li>
-    <li>Build 3 Real Projects</li>
-    <li>Get a Tech Job</li>
-  </ol>
+      <label for="blood">Blood Group:</label>
+      <select id="blood" name="blood" required>
+        <option value="">--Select--</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>O+</option>
+        <option>O-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+      </select><br><br>
 
-  <hr>
+      <label for="nationality">Nationality:</label>
+      <select id="nationality" name="nationality" required>
+        <option value="">--Select--</option>
+        <option>Indian</option>
+        <option>American</option>
+        <option>Canadian</option>
+        <option>Other</option>
+      </select><br><br>
+    </fieldset>
 
-  <!-- Task 5: div and span -->
-  <div>
-    <p>This is a <span class="highlight">special</span> section inside a div container.</p>
-  </div>
+    <!-- Parent/Guardian Details -->
+    <fieldset>
+      <legend>Parent / Guardian Details</legend>
 
-  <hr>
+      <p>Select Parent/Guardian Type:</p>
+      <input type="checkbox" id="father" name="guardian" value="Father">
+      <label for="father">Father</label>
 
-  <!-- Bonus Task: Show both block and inline elements with comments -->
-  <!-- Block-level elements: h1, p, div, ul, ol -->
-  <!-- Inline elements: b, i, a, strong, em, span -->
-  <h1>Bonus Example</h1>
-  <div>
-    <p>
-      This paragraph contains <b>bold</b>, <i>italic</i>, and
-      <a href="#">a link</a> — all inline elements inside a block element.
-    </p>
-  </div>
+      <input type="checkbox" id="mother" name="guardian" value="Mother">
+      <label for="mother">Mother</label>
+
+      <input type="checkbox" id="guardian" name="guardian" value="Guardian">
+      <label for="guardian">Guardian</label>
+      <br><br>
+
+      <label for="occupation">Occupation:</label>
+      <input type="text" id="occupation" name="occupation" placeholder="Parent's occupation"><br><br>
+
+      <label for="religion">Religion:</label>
+      <input type="text" id="religion" name="religion" placeholder="Enter religion"><br><br>
+    </fieldset>
+
+    <!-- Other Details -->
+    <fieldset>
+      <legend>Additional Information</legend>
+
+      <label for="activities">Extra-curricular Activities:</label>
+      <input type="text" id="activities" name="activities" placeholder="e.g. Sports, Music, Art"><br><br>
+
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+      <label for="certificates">Upload Certificates:</label>
+      <input type="file" id="certificates" name="certificates" accept=".pdf,.jpg,.png"><br><br>
+    </fieldset>
+
+    <input type="submit" value="Submit Form">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>
 
 </body>
 </html>
