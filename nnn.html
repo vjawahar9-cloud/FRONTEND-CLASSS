@@ -1,101 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Tables Example</title>
+    <title>My First CSS Page</title>
+
+    <!-- Task 2, 3, 4, 5, Bonus - Internal CSS -->
+    <style>
+        /* Task 2: Internal CSS for background and text alignment */
+        body {
+            background-color: lightyellow;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Task 3: External CSS simulation (added inside internal style) */
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            color: darkgreen;
+        }
+
+        /* Task 4: Class and ID selectors */
+        #main-heading {
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: orange;
+            font-style: italic;
+        }
+
+        /* Task 5: Profile card styles */
+        .card {
+            background-color: white;
+            width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        #myName {
+            color: darkblue;
+        }
+
+        .about {
+            color: #555;
+            font-size: 16px;
+        }
+
+        footer {
+            color: gray;
+            font-size: 14px;
+        }
+
+        /* Bonus Task: 3-section webpage styles */
+        section {
+            padding: 40px;
+            color: white;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+            color: black;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
-  <!-- Task 1 & 2: Weekly Schedule Table -->
-  <h2>My Weekly Schedule</h2>
-  <table border="1" cellpadding="8" width="60%">
-    <tr>
-      <th>Day</th>
-      <th>Subject 1</th>
-      <th>Subject 2</th>
-      <th>Subject 3</th>
-    </tr>
-    <tr>
-      <td>Monday</td>
-      <td>Math</td>
-      <td>English</td>
-      <td>Science</td>
-    </tr>
-    <tr>
-      <td>Tuesday</td>
-      <td>History</td>
-      <td>Math</td>
-      <td>Computer</td>
-    </tr>
-    <tr>
-      <td>Wednesday</td>
-      <td>English</td>
-      <td>Science</td>
-      <td>PE</td>
-    </tr>
-  </table>
 
-  <br>
+    <!-- 🧩 Task 1: Inline CSS -->
+    <h1 style="color: blue; text-align: center;">Welcome to My First CSS Page</h1>
+    <p style="color: green; font-size: 18px;">This is my first paragraph styled using inline CSS.</p>
+    <p style="color: red; font-style: italic;">This is my second paragraph using inline CSS.</p>
 
-  <!-- Task 3 & 4: Table with colspan and rowspan -->
-  <h2>Student Report</h2>
-  <table border="1" cellpadding="8" width="60%">
-    <tr>
-      <th colspan="4">Student Report</th>
-    </tr>
-    <tr>
-      <th rowspan="2">Name</th>
-      <th colspan="3">Marks</th>
-    </tr>
-    <tr>
-      <th>Math</th>
-      <th>Science</th>
-      <th>English</th>
-    </tr>
-    <tr>
-      <td>John</td>
-      <td>85</td>
-      <td>90</td>
-      <td>88</td>
-    </tr>
-    <tr>
-      <td>Emma</td>
-      <td>92</td>
-      <td>89</td>
-      <td>91</td>
-    </tr>
-  </table>
+    <hr>
 
-  <br>
+    <!-- 🎨 Task 2 + 3 + 4: Internal + Selectors Practice -->
+    <h1 id="main-heading">CSS Selectors Example</h1>
+    <p>This paragraph is styled using an element selector.</p>
+    <p class="highlight">This paragraph is styled using a class selector.</p>
 
-  <!-- Bonus Task: Favorite Movies -->
-  <h2>My Favorite Movies</h2>
-  <table border="1" cellpadding="8" width="50%">
-    <tr>
-      <th>Title</th>
-      <th>Genre</th>
-      <th>Rating</th>
-    </tr>
-    <tr>
-      <td>Inception</td>
-      <td>Sci-Fi</td>
-      <td>9/10</td>
-    </tr>
-    <tr>
-      <td>Avengers: Endgame</td>
-      <td>Action</td>
-      <td>8.5/10</td>
-    </tr>
-    <tr>
-      <td>Interstellar</td>
-      <td>Adventure</td>
-      <td>9.2/10</td>
-    </tr>
-    <tr>
-      <td>The Lion King</td>
-      <td>Animation</td>
-      <td>8/10</td>
-    </tr>
-  </table>
+    <hr>
+
+    <!-- 🧑‍💻 Task 5: Profile Card -->
+    <div class="card">
+        <h1 id="myName">Jawahar</h1>
+        <p class="about">I am a passionate learner and web developer exploring HTML & CSS.</p>
+        <footer>Made by Me</footer>
+    </div>
+
+    <hr>
+
+    <!-- 💎 Bonus Task: 3 Section Webpage -->
+    <section class="blue">
+        <h2>Section 1 - Blue</h2>
+        <p>This is the blue section.</p>
+    </section>
+
+    <section class="yellow">
+        <h2>Section 2 - Yellow</h2>
+        <p>This is the yellow section.</p>
+    </section>
+
+    <section class="green">
+        <h2>Section 3 - Green</h2>
+        <p>This is the green section.</p>
+    </section>
+
 </body>
 </html>
