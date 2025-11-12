@@ -1,98 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page Demo</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-/* Gradient Background */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ff8a00, #e52e71);
 }
 
-/* Text shadow and transform */
-h1 {
-    text-align: center;
-    font-size: 60px;
-    color: white;
-    text-shadow: 3px 3px 5px black;
-    transform: rotate(-3deg);
-    margin-top: 40px;
-}
-
-/* Banner Section */
-.banner {
-    height: 300px;
-    background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: white;
-    text-align: center;
-    font-size: 40px;
-    padding-top: 120px;
-    margin-top: 40px;
-}
-
-/* Position boxes container */
-.container {
-    position: relative;
-    height: 300px;
-    background: #ffffffaa;
-    border-radius: 10px;
-    margin: 40px;
-}
-
-/* Relative Box */
-.box1 {
-    width: 150px;
-    height: 150px;
-    background: red;
-    position: relative;
-    top: 20px;
-    left: 20px;
-}
-
-/* Absolute Box */
-.box2 {
-    width: 150px;
-    height: 150px;
-    background: green;
-    position: absolute;
-    top: 50px;
-    left: 200px;
-}
-
-/* Fixed Box */
-.box3 {
-    width: 150px;
-    height: 150px;
-    background: blue;
+/* Fixed Navigation Bar */
+nav {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
 }
 
-</style>
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
+/* Overlay Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 30px 50px;
+    border-radius: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Floating Contact Button */
+.contact-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff0066;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+/* Sticky Header (for About Section) */
+.sticky-header {
+    position: sticky;
+    top: 70px; /* pushes below fixed nav */
+    background: #f9f9f9;
+    padding: 15px;
+    font-size: 28px;
+    border-bottom: 2px solid #ddd;
+    margin-top: 20px;
+}
+
+/* About Section */
+.about {
+    padding: 20px 40px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Amazing Homepage Effects</h1>
+<!-- Fixed Navigation -->
+<nav>
+    <div class="logo">My Website</div>
+    <div class="menu">Home | About | Contact</div>
+</nav>
 
-<!-- Fixed Background Banner -->
-<div class="banner">Fixed Background Banner</div>
-
-<!-- Positioned Boxes -->
-<div class="container">
-    <div class="box1"></div>
-    <div class="box2"></div>
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero-text">Welcome to Our Landing Page</div>
 </div>
 
-<div class="box3"></div>
+<!-- Sticky Header -->
+<div class="sticky-header">
+    About Us
+</div>
+
+<!-- About Section -->
+<div class="about">
+    <p>
+        We are a creative digital agency providing modern solutions for your business. 
+        Our focus is on delivering clean designs, user-friendly experiences, and responsive layouts. 
+        With our expert team, you can bring your ideas to life in the digital world.
+    </p>
+</div>
+
+<!-- Floating Contact Button -->
+<div class="contact-btn">Contact Us</div>
 
 </body>
 </html>
