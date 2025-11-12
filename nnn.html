@@ -1,122 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First CSS Page</title>
-
-    <!-- Task 2, 3, 4, 5, Bonus - Internal CSS -->
-    <style>
-        /* Task 2: Internal CSS for background and text alignment */
-        body {
-            background-color: lightyellow;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-
-        /* Task 3: External CSS simulation (added inside internal style) */
-        h1 {
-            color: darkblue;
-        }
-
-        p {
-            color: darkgreen;
-        }
-
-        /* Task 4: Class and ID selectors */
-        #main-heading {
-            color: crimson;
-            text-decoration: underline;
-        }
-
-        .highlight {
-            color: orange;
-            font-style: italic;
-        }
-
-        /* Task 5: Profile card styles */
-        .card {
-            background-color: white;
-            width: 300px;
-            margin: 40px auto;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px gray;
-        }
-
-        #myName {
-            color: darkblue;
-        }
-
-        .about {
-            color: #555;
-            font-size: 16px;
-        }
-
-        footer {
-            color: gray;
-            font-size: 14px;
-        }
-
-        /* Bonus Task: 3-section webpage styles */
-        section {
-            padding: 40px;
-            color: white;
-        }
-
-        .blue {
-            background-color: blue;
-        }
-
-        .yellow {
-            background-color: yellow;
-            color: black;
-        }
-
-        .green {
-            background-color: green;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Property Example</title>
+<style>
+  .block {
+    display: block;
+    background-color: lightcoral;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  .inline {
+    display: inline;
+    background-color: lightgreen;
+    padding: 5px;
+  }
+  .inline-block {
+    display: inline-block;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 5px;
+  }
+  .none {
+    display: none;
+  }
+</style>
 </head>
 <body>
+  <h2>Display Property Examples</h2>
 
-    <!-- 🧩 Task 1: Inline CSS -->
-    <h1 style="color: blue; text-align: center;">Welcome to My First CSS Page</h1>
-    <p style="color: green; font-size: 18px;">This is my first paragraph styled using inline CSS.</p>
-    <p style="color: red; font-style: italic;">This is my second paragraph using inline CSS.</p>
+  <div class="block">This is a Block Element</div>
 
-    <hr>
+  <span class="inline">Inline 1</span>
+  <span class="inline">Inline 2</span>
 
-    <!-- 🎨 Task 2 + 3 + 4: Internal + Selectors Practice -->
-    <h1 id="main-heading">CSS Selectors Example</h1>
-    <p>This paragraph is styled using an element selector.</p>
-    <p class="highlight">This paragraph is styled using a class selector.</p>
+  <div class="inline-block">Inline-Block 1</div>
+  <div class="inline-block">Inline-Block 2</div>
 
-    <hr>
-
-    <!-- 🧑‍💻 Task 5: Profile Card -->
-    <div class="card">
-        <h1 id="myName">Jawahar</h1>
-        <p class="about">I am a passionate learner and web developer exploring HTML & CSS.</p>
-        <footer>Made by Me</footer>
-    </div>
-
-    <hr>
-
-    <!-- 💎 Bonus Task: 3 Section Webpage -->
-    <section class="blue">
-        <h2>Section 1 - Blue</h2>
-        <p>This is the blue section.</p>
-    </section>
-
-    <section class="yellow">
-        <h2>Section 2 - Yellow</h2>
-        <p>This is the yellow section.</p>
-    </section>
-
-    <section class="green">
-        <h2>Section 3 - Green</h2>
-        <p>This is the green section.</p>
-    </section>
-
+  <div class="none">You can’t see me (display:none)</div>
 </body>
 </html>
