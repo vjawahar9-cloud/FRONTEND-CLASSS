@@ -3,41 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Display Property Example</title>
+<title>Responsive 3-Column Flexbox</title>
 <style>
-  .block {
-    display: block;
-    background-color: lightcoral;
-    padding: 10px;
-    margin-bottom: 5px;
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
   }
-  .inline {
-    display: inline;
-    background-color: lightgreen;
-    padding: 5px;
+
+  .flex-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
   }
-  .inline-block {
-    display: inline-block;
-    background-color: lightblue;
-    padding: 10px;
-    margin: 5px;
+
+  .column {
+    flex: 1;
+    min-width: 250px;
+    background-color: #a3d2ca;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
   }
-  .none {
-    display: none;
+
+  @media (max-width: 768px) {
+    .column {
+      flex: 100%;
+    }
   }
 </style>
 </head>
 <body>
-  <h2>Display Property Examples</h2>
+  <h2>Responsive 3-Column Layout (Flexbox)</h2>
 
-  <div class="block">This is a Block Element</div>
-
-  <span class="inline">Inline 1</span>
-  <span class="inline">Inline 2</span>
-
-  <div class="inline-block">Inline-Block 1</div>
-  <div class="inline-block">Inline-Block 2</div>
-
-  <div class="none">You can’t see me (display:none)</div>
+  <div class="flex-container">
+    <div class="column">Column 1</div>
+    <div class="column">Column 2</div>
+    <div class="column">Column 3</div>
+  </div>
 </body>
 </html>
