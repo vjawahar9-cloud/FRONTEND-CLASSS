@@ -1,45 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.dashboard {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 60px 1fr;
-  grid-template-areas:
-    "sidebar topbar"
-    "sidebar main";
-  height: 100vh;
-}
+    <title>Dashboard Grid</title>
 
-.sidebar {
-  grid-area: sidebar;
-  background: #3a3a3a;
-  color: white;
-  padding: 20px;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-.topbar {
-  grid-area: topbar;
-  background: #ddd;
-  padding: 20px;
-}
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: 70px 1fr 50px;
+            grid-template-areas:
+                "sidebar header"
+                "sidebar main"
+                "sidebar footer";
+            height: 100vh;
+        }
 
-.main {
-  grid-area: main;
-  padding: 20px;
-  background: #f9f9f9;
-}
-</style>
+        .header {
+            grid-area: header;
+            background: #1e90ff;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #222;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .main {
+            grid-area: main;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #f0f0f0;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+
 </head>
-
 <body>
+
 <div class="dashboard">
 
-<div class="sidebar">Sidebar</div>
-<div class="topbar">Top Bar</div>
-<div class="main">Main Dashboard Content</div>
+    <header class="header">Dashboard Header</header>
+
+    <aside class="sidebar">
+        <p>Menu 1</p>
+        <p>Menu 2</p>
+        <p>Menu 3</p>
+    </aside>
+
+    <main class="main">
+        <h2>Dashboard Overview</h2>
+
+        <div class="stats">
+            <div class="card">Users</div>
+            <div class="card">Sales</div>
+            <div class="card">Revenue</div>
+            <div class="card">Orders</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Footer Section © 2025
+    </footer>
 
 </div>
+
 </body>
 </html>
