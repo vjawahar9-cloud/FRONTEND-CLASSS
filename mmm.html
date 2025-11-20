@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Animations in One</title>
+  <style>
+    /* 1. Loader Animation */
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #ddd;
+      border-top-color: royalblue;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 40px;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* 2. Card Flip */
+    .flip-card {
+      width: 200px;
+      height: 200px;
+      perspective: 1000px;
+      margin-bottom: 40px;
+    }
+    .flip-inner {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+    .flip-card:hover .flip-inner {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: white;
+      border-radius: 10px;
+    }
+    .front { background: royalblue; }
+    .back {
+      background: tomato;
+      transform: rotateY(180deg);
+    }
+
+    /* 3. Progress Bar */
+    .progress-bar {
+      width: 300px;
+      height: 20px;
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    .fill {
+      width: 0%;
+      height: 100%;
+      background: limegreen;
+      animation: loading 3s linear forwards;
+    }
+    @keyframes loading {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    /* 4. Bouncing Ball */
+    .ball {
+      width: 40px;
+      height: 40px;
+      background: crimson;
+      border-radius: 50%;
+      position: relative;
+      animation: bounce 1s ease-in-out infinite alternate;
+      margin-bottom: 40px;
+    }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(120px); }
+    }
+
+    /* 5. Hover Card */
+    .card {
+      width: 250px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f7f7f7;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Loader Animation</h2>
+  <div class="loader"></div>
+
+  <h2>2. Card Flip Animation</h2>
+  <div class="flip-card">
+    <div class="flip-inner">
+      <div class="front">FRONT</div>
+      <div class="back">BACK</div>
+    </div>
+  </div>
+
+  <h2>3. Progress Bar Animation</h2>
+  <div class="progress-bar">
+    <div class="fill"></div>
+  </div>
+
+  <h2>4. Bouncing Ball</h2>
+  <div class="ball"></div>
+
+  <h2>5. Hover Card Effect</h2>
+  <div class="card">
+    <h3>Portfolio Card</h3>
+    <p>Hover to see animation effect.</p>
+  </div>
+
+</body>
+</html>
