@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Change Text</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card{
+            width:250px;
+            padding: 20px;
+
+        }
+    </style>
+    
 </head>
 <body>
 
-<p id="textPara">Click the button to change this text.</p>
+    <div>
 
-<button onclick="changeText()">Change Text</button>
+    <h3>product card</h3>
+    <p>Click card to view details</p>
+    <button class="btn" id="buybtn">Buy now</button>
 
-<script>
-    function changeText() {
-        document.getElementById("textPara").innerText = "The text has been changed!";
-    }
-</script>
+    </div>
 
+    <script>
+        document.getElementById("card")
+        .addEventlistener("click",function(){
+            alert("opening product details");
+        })
+
+        document.getElementById("buybtn")
+        .addEventlistener("click",function(event){
+            event.stopPropagation();
+            alert("buying product");
+        })
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+    
+    
 </body>
 </html>
