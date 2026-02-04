@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini E-Commerce</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    .cart {
+      margin-top: 30px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>🛒 Mini Shop</h2>
+  <h3>Cart: <span id="cartCount">0</span></h3>
+</header>
+
+<div class="container">
+  <h2>Products</h2>
+  <div class="grid" id="productList"></div>
+
+  <div class="cart">
+    <h2>Cart Items</h2>
+    <div id="cartItems"></div>
+    <h3>Total: ₹<span id="total">0</span></h3>
+  </div>
+</div>
+
+<script>
+  const products = [
+    {
+      id: 1,
+      name: "Wireless Headphones",
+      price: 1999,
+      image: "https://via.placeholder.com/200"
+    },
+    {
+      id: 2,
+      name: "Smart Watch",
+      price: 2999,
+      image: "https://via.placeholder.com/200"
+    },
+    {
+      id: 3,
+      name: "Running Shoes",
+      price: 2499,
+      image: "https://via.placeholder.com/200"
+    }
+  ];
+
+  const productList = document.getElementById("productList");
+  const cartItems = document.getElementById("cartItems");
+  const cartCount = document.getElementById("cartCount");
+  const total = document.getElementById("total");
+
+  let cart = [];
+
+  function displayProducts() {
+    products.forEach(product => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `
+        <img src="${product.image}">
+        <h3>${product.name}</h3>
+        <p>₹${product.price}</p>
+        <button onclick="addToCart(${product.id})">Add to Cart</button>
+      `;
+      productList.appendChild(div);
+    });
+  }
+
+  function addToCart(id) {
+    const item = products.find(p => p.id === id);
+    cart.push(item);
+    updateCart();
+  }
+
+  function updateCart() {
+    cartItems.innerHTML = "";
+    let sum = 0;
+
+    cart.forEach((item, index) => {
+      sum += item.price;
+      cartItems.innerHTML += `
+        <div class="cart-item">
+          <span>${item.name}</span>
+          <button onclick="removeItem(${index})">X</button>
+        </div>
+      `;
+    });
+
+    cartCount.textContent = cart.length;
+    total.textContent = sum;
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  displayProducts();
+</script>
+
+</body>
+</html>
